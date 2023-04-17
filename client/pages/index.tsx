@@ -1,22 +1,16 @@
-import { DarkMode, LightMode } from '@mui/icons-material';
-import { Button, IconButton, NoSsr } from '@mui/material';
+import { Button, NoSsr } from '@mui/material';
 import type { GetStaticProps, NextPage } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-import Footer from '@/components/shared/Footer';
 import LanguageSwitcher from '@/components/shared/LanguageSwitcher';
 import Logo from '@/components/shared/Logo';
 import { FLAG_DISABLE_SIGNUPS } from '@/constants/flags';
 import { logout } from '@/store/auth/authSlice';
-import { setTheme } from '@/store/build/buildSlice';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
 import { setModalState } from '@/store/modal/modalSlice';
 import styles from '@/styles/pages/Home.module.scss';
-
-import { DIGITALOCEAN_URL } from '../constants';
 
 export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => ({
   props: {
@@ -34,7 +28,7 @@ const Home: NextPage = () => {
 
   const handleLogin = () => dispatch(setModalState({ modal: 'auth.login', state: { open: true } }));
   const handleRegister = () => dispatch(setModalState({ modal: 'auth.register', state: { open: true } }));
-  const handleToggle = () => dispatch(setTheme({ theme: theme === 'light' ? 'dark' : 'light' }));
+  // const handleToggle = () => dispatch(setTheme({ theme: theme === 'light' ? 'dark' : 'light' }));
   const handleLogout = () => dispatch(logout());
 
   return (
@@ -54,7 +48,9 @@ const Home: NextPage = () => {
             {isLoggedIn ? (
               <>
                 <Link href="/dashboard" passHref>
-                  <Button size="large" style={{ width: '200px', height: '100%' }}>{t<string>('landing.actions.app')}</Button>
+                  <Button size="large" style={{ width: '200px', height: '100%' }}>
+                    {t<string>('landing.actions.app')}
+                  </Button>
                 </Link>
 
                 <Button size="large" style={{ width: '200px' }} variant="outlined" onClick={handleLogout}>
@@ -63,9 +59,17 @@ const Home: NextPage = () => {
               </>
             ) : (
               <>
-                <Button size="large" style={{ width: '200px' }} onClick={handleLogin}>{t<string>('landing.actions.login')}</Button>
+                <Button size="large" style={{ width: '200px' }} onClick={handleLogin}>
+                  {t<string>('landing.actions.login')}
+                </Button>
 
-                <Button size="large" style={{ width: '200px' }} variant="outlined" onClick={handleRegister} disabled={FLAG_DISABLE_SIGNUPS}>
+                <Button
+                  size="large"
+                  style={{ width: '200px' }}
+                  variant="outlined"
+                  onClick={handleRegister}
+                  disabled={FLAG_DISABLE_SIGNUPS}
+                >
                   {t<string>('landing.actions.register')}
                 </Button>
               </>
@@ -75,24 +79,11 @@ const Home: NextPage = () => {
       </section>
 
       <footer>
-        <section className={styles.section}>
-          <a href={DIGITALOCEAN_URL} target="_blank" rel="noreferrer">
-            <Image
-              src={`/images/sponsors/${theme == 'dark' ? 'digitalocean' : 'digitaloceanLight'}.svg`}
-              style={{ width: 200, height: 40, objectFit: 'contain' }}
-              alt="Powered By DigitalOcean"
-              width={200}
-              height={40}
-            />
-          </a>
-        </section>
-        <div className={styles.actions}>
+        <div className={styles.actions} style={{ marginLeft: 'auto', marginRight: 0 }}>
           <div className={styles.version}>
-            <Footer className="font-semibold leading-5 opacity-50" />
             <div>v{process.env.appVersion}</div>
           </div>
           <div>
-            <IconButton onClick={handleToggle}>{theme === 'dark' ? <DarkMode /> : <LightMode />}</IconButton>
             <LanguageSwitcher />
           </div>
         </div>

@@ -1,4 +1,4 @@
-<img src="https://rxresu.me/images/logos/logo.png" alt="Reactive Resume" width="256px" height="256px" />
+<img src="https://rxresu.me/images/logos/wwc_logo.jpeg" alt="Reactive Resume" width="256px" height="256px" />
 
 # Reactive Resume
 
@@ -30,6 +30,7 @@ You have complete control over what goes into your resume, how it looks, what co
   - [Donations](#donations)
     - [GitHub Sponsor](#github-sponsor)
     - [PayPal](#paypal)
+  - [GitHub Star History](#github-star-history)
   - [Infrastructure](#infrastructure)
   - [Contributors Wall](#contributors-wall)
   - [License](#license)

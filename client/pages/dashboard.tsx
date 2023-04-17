@@ -46,7 +46,7 @@ const Dashboard: NextPage = () => {
 
       <header>
         <Link href="/">
-          <Logo size={40} />
+          <Logo size={100} />
         </Link>
 
         <Avatar size={40} />

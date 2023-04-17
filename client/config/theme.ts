@@ -65,6 +65,6 @@ export const darkTheme = createTheme({
   palette: {
     mode: 'dark',
     primary: { main: '#FCED17' }, // neutral[100]
-    secondary: { main: '#2dd4bf' }, // teal[400]
+    secondary: { main: '#007d7f' }, // teal[400]
   },
 });
