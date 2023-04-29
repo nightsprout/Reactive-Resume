@@ -54,7 +54,7 @@ const theme: ThemeOptions = {
 export const lightTheme = createTheme({
   ...theme,
   palette: {
-    mode: 'light',
+    mode: 'dark',
     primary: { main: '#007D7F' }, // neutral[700]
     secondary: { main: '#0d9488' }, // teal[600]
   },

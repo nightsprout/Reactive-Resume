@@ -17,9 +17,11 @@
     "server"
   ],
   "dependencies": {
+    "@nestjs/common": "^9.2.1",
     "cross-env": "^7.0.3",
     "cross-var": "^1.1.0",
     "env-cmd": "^10.1.0",
+    "openai": "^3.2.1",
     "turbo": "^1.7.0",
     "uuid": "^9.0.0"
   },

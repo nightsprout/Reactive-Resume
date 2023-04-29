@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 import Heading from '@/components/shared/Heading';
 import ResumeInput from '@/components/shared/ResumeInput';
+import FloatingChatButton from '@/components/ttech/FloatingChatButton';
 
 import PhotoFilters from './PhotoFilters';
 import PhotoUpload from './PhotoUpload';
@@ -24,6 +25,7 @@ const Basics = () => {
 
   return (
     <>
+      <FloatingChatButton />
       <Heading path="sections.basics" name={t<string>('builder.leftSidebar.sections.basics.heading')} />
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -82,7 +84,7 @@ const Basics = () => {
           type="textarea"
           label={t<string>('builder.common.form.summary.label')}
           path="basics.summary"
-          className="sm:col-span-2"
+          className="ais-summary sm:col-span-2"
           markdownSupported
         />
       </div>

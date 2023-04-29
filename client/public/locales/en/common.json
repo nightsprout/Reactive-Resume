@@ -15,8 +15,8 @@
   "date": {
     "present": "Present"
   },
-  "subtitle": "A free and open source resume builder.",
-  "title": "Reactive Resume",
+  "subtitle": "Build and publish your resume with Women Who Code",
+  "title": "Resume Builder",
   "toast": {
     "error": {
       "upload-file-size": "Please upload only files under 2 megabytes.",

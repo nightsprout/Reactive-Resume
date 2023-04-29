@@ -1,6 +1,6 @@
 .container {
   @apply h-screen w-[95vw] md:w-[70vw] lg:w-[50vw] xl:w-[30vw] 2xl:w-[28vw];
-  @apply bg-neutral-50 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-50;
+  @apply bg-neutral-50 text-neutral-900 dark:bg-[#007d7f]  dark:text-neutral-50;
   @apply relative flex border-r-2 border-neutral-50/10;
 
   nav {

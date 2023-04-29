@@ -21,11 +21,7 @@ const ThemeWrapper: React.FC<React.PropsWithChildren<unknown>> = ({ children }) 
   }, [theme, dispatch]);
 
   useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+    document.documentElement.classList.add('dark');
   }, [isDarkMode]);
 
   return <ThemeProvider theme={muiTheme}>{children}</ThemeProvider>;

@@ -59,7 +59,7 @@ const Settings = () => {
   );
   const { mutateAsync: resetResumeMutation } = useMutation<Resume, ServerError, ResetResumeParams>(resetResume);
 
-  const handleSetTheme = (value: boolean) => dispatch(setTheme({ theme: value ? 'dark' : 'light' }));
+  const handleSetTheme = (value: boolean) => dispatch(setTheme({ theme: 'dark' }));
 
   const handleChangePageFormat = (value: PageConfig['format'] | null) =>
     dispatch(setResumeState({ path: 'metadata.page.format', value }));
