@@ -12,7 +12,7 @@ const nextConfig = {
   },
 
   images: {
-    domains: ['cdn.rxresu.me', 'www.gravatar.com'],
+    domains: ['cdn.ttech-resume.com', 'www.gravatar.com'],
   },
 
   // Hack to make Tailwind darkMode 'class' strategy with CSS Modules

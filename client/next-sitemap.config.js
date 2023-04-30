@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://rxresu.me',
+  siteUrl: 'https://ttech-resume.com',
   changefreq: 'monthly',
   generateRobotsTxt: true,
 };

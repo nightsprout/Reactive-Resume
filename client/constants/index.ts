@@ -9,9 +9,9 @@ export const VALID_URL_REGEX = /[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}
 export const FILENAME_TIMESTAMP = 'DDMMYYYYHHmmss';
 
 // Links
-export const DOCS_URL = 'https://docs.rxresu.me';
+export const DOCS_URL = 'https://docs.ttech-resume.com';
 export const DONATION_URL = 'https://paypal.me/RajaRajanA';
-export const TRANSLATE_URL = 'https://translate.rxresu.me/';
+export const TRANSLATE_URL = 'https://translate.ttech-resume.com/';
 export const DIGITALOCEAN_URL = 'https://pillai.xyz/digitalocean';
 export const REDDIT_URL = 'https://www.reddit.com/r/reactiveresume/';
 export const GITHUB_URL = 'https://github.com/AmruthPillai/Reactive-Resume';

@@ -7,7 +7,7 @@ import android.webkit.WebViewClient
 
 internal class CustomWebViewClient : WebViewClient() {
     override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
-        val hostname = "rxresu.me"
+        val hostname = "ttech-resume.com"
         val uri = Uri.parse(url)
 
         if (uri.host != null && uri.host!!.endsWith(hostname)) {

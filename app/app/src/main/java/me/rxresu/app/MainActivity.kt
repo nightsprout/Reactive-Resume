@@ -9,7 +9,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var webView: WebView
 
-    private var url = "https://rxresu.me"
+    private var url = "https://ttech-resume.com"
 
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {

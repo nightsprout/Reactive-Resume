@@ -12,7 +12,7 @@ assignees: ''
 
 **Product Flavor**
 
-- [ ] Managed (https://rxresu.me)
+- [ ] Managed (https://ttech-resume.com)
 - [ ] Self Hosted
 
 **To Reproduce**
