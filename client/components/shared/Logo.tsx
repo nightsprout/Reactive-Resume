@@ -1,5 +1,5 @@
 type Props = {
-  size?: 256 | 64 | 48 | 40 | 32;
+  size?: 100 | 256 | 64 | 48 | 40 | 32;
 };
 
 const Logo: React.FC<Props> = ({ size = 64 }) => (

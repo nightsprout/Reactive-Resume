@@ -30,8 +30,7 @@ const ChatWindow: React.FC = () => {
   };
 
   const sendMessage = async (content: string) => {
-    console.log(content);
-    const newUserMessage = { role: 'user', content: content };
+    const newUserMessage: IMessage = { role: 'user', content: content };
     setMessages((prevMessages) => [...prevMessages, newUserMessage]);
     setLoading(true);
 
@@ -40,7 +39,7 @@ const ChatWindow: React.FC = () => {
         model: 'gpt-3.5-turbo',
         messages: [...messages, newUserMessage],
       });
-      const response = completion.data.choices[0].message.content;
+      const response = completion?.data?.choices?.[0]?.message?.content ?? '';
       setLoading(false);
       setMessages((prevMessages) => [...prevMessages, { role: 'assistant', content: response }]);
     } catch (error) {
